@@ -22,6 +22,8 @@ This project demonstrates how to configure a network for a wireless deployment w
 The purpose is to demonstrate how to deploy wireless networks by configuring a WLC, LWAPs connected to the same network as the WLC, as well as APs on different networks.
  </p>
 
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+
 <p>This Project will consist of 11 Objectives:
    
 1. Connect PC to WLC port for Initial Setup
