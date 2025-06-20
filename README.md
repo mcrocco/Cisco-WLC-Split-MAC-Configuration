@@ -16,6 +16,7 @@ This project demonstrates how to configure a network for a wireless deployment w
 - CAPWAP Tunnels
 - DHCP</p>
 
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p>What is the purpose of this project?
  
 The purpose is to demonstrate how to deploy wireless networks by configuring a WLC, LWAPs connected to the same network as the WLC, as well as APs on different networks.
