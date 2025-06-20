@@ -3,7 +3,7 @@
 
 This project demonstrates how to configure a network for a wireless deployment with a wireless LAN controller (WLC) and Lightweight Access Points (LWAP) via a Split-MAC architecture. 
 
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p>Environments and Technologies Used:
 
 - Cisco Packet Tracer
@@ -16,7 +16,7 @@ This project demonstrates how to configure a network for a wireless deployment w
 - CAPWAP Tunnels
 - DHCP</p>
 
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p>What is the purpose of this project?
  
 The purpose is to demonstrate how to deploy wireless networks by configuring a WLC, LWAPs connected to the same network as the WLC, as well as APs on different networks.
