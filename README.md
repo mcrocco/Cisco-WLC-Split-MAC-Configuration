@@ -38,3 +38,14 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 10. Configure DHCP leasing on SW2 for the LWAP in the 172.20.40.0 /24 network
 11. Confirm that the LWAP has formed a connection with the WLC back at the 192.168.10.0 /24 network and is broadcasting SSIDs
 </p>
+
+<p>The Administrator Building will consists of 3 VLANs: The Management VLAN (10), Corporate VLAN (20), & Guest VLAN (30). VLAN 10 will have a subnet of 192.168.10.0 /24, VLAN 20 will have a subnet of 192.168.20.0 /24, & VLAN 30 will have a subnet of 192.168.30.0 /24</p>
+
+
+
+<p><h3>1. Connect PC to WLC port for Initial Setup</h3>
+
+- First, we want to physically connect our PC to the WLC. We will attach an Ethernet copper cable between the PC and Gigabit Port 1. Note that we could also connect to the CLI of the WLC via the console port, but because we are using Packet Tracer we only have the option of accessing the GUI.
+- The default IP for the WLC is 192.168.1.1 /28. We will change the configuration on the PC to have an IP of 192.168.1.2 /28 so that we are on the same subnet as the WLC:
+
+<img src="https://i.imgur.com/DoTdAH3.png"/> 
