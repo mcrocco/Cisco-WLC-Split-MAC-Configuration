@@ -71,6 +71,9 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 - After this, select "Next" then "Apply", in which the WLC will reboot with its newly configured settings
 </p>
 
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+
+
 <p><h3>2. Configure multilayer switch SW1 (VLANs, ip routing, DHCP, etc)</h3>
 
 - SW1 will be performing all of the routing in this network, as well as act as a DHCP server for each VLAN. In this topology, there will be 3 VLANs: Management (10), Corporate (20), & Guest (30). Lets start by configuring the VLANs on SW1:
@@ -96,8 +99,9 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/d5telcI.png"/> 
 
 </p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 
-<p><h3>Configure ports on SW1 connected to the WLC, PC, & LWAPs</h3>
+<p><h3>3. Configure ports on SW1 connected to the WLC, PC, & LWAPs</h3>
 
 - We now need to configure the ports of SW1 that are connected to the LWAPs, PC, and the WLC. The port to the WLC will be a trunk port, as every VLAN will need to be transported between the WLC and SW1:
 
@@ -109,7 +113,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/Z5Uivfu.png"/> 
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>4. Connect back to the GUI of the WLC using PC web browser</h3>
 
 - Now we can go back on the PC browser to access the WLC GUI. Type in “192.168.10.50” into the browser, and login using the credentials we made earlier. Remember to change the PC IP address settings to DHCP so that it can receive the correct IP address in the same subnet as the WLC:
@@ -117,8 +121,8 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/5w66GLU.png"/> 
 
 </p>
-
-<p><h3>Configure dynamic interfaces and WLANs on WLC</h3>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+<p><h3>5. Configure dynamic interfaces and WLANs on WLC</h3>
 
 - Once logged in to the GUI, we need to configure the dynamic interfaces. Dynamic interfaces are virtual interfaces which will map the WLAN to the wired VLAN. When the WLC receives traffic from a specific WLAN, it will use this dynamic interface to receive the traffic, and vice versa for sending the traffic out for a specific VLAN. To configure the dynamic interfaces, head to Controller > Interfaces
 - From the Interfaces window, you should already see the management interface that we initially configured. In the top right of the window, select the "New" button to create the Corporate dynamic interface:
@@ -159,7 +163,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>6. Confirm that AP1 & AP2 has a CAPWAP connection with the WLC and is broadcasting SSIDs</h3>
 
 - We should now see that AP1 & AP2 has formed a CAPWAP connection with the WLC. In the GUI, head to the Wireless tab:
@@ -171,7 +175,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/ItE8Dvp.png"/>
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>7. Attempt to connect to a SSID using a mobile device</h3>
 
 - We will now attempt to wirelessly connect to an AP using a mobile device. In the mobile device configuration, enter the SSID of Guest, change the Authentication to WPA2-PSK, and the PSK of Cisco123:
@@ -186,7 +190,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 - Note that it has received an IP address from the management VLAN. This is a known bug in Packet Tracer, not a misconfiguration. In a real scenario, it would’ve received an IP address from the 192.168.20.0 /24 subnet.
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>8. Configure the 172.20.40.0 /24 network on SW2 and VLAN 40 for the attached LWAP</h3>
 
 - SW2 needs to be configured for Layer 3, with a SVI for vlan 40. VLAN 40 is the vlan that the AP will connect to:
@@ -194,7 +198,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/rgC0inu.png"/>
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>9. Configure an OSPF Point-to-Point (PTP) network connection between the Administrator building (SW1) and the Finance building (SW2). Advertise all known networks to each other</h3>
 
 - To connect both multilayer switches SW1 & SW2 together from separate networks, we will configure an OSPF PTP network. OSPF will allow both switches to dynamically advertise their networks to each other, so that the WLC can form an CAPWAP tunnel to the LWAP connected to the Finance network. The PTP network will be 10.0.0.0 /30. We will make each interface a Layer 3 interface with the “no switch port” command, with the following OSPF commands:
@@ -212,7 +216,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/91M1AeX.png"/>
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>10. Attempt to connect to a SSID using a mobile device</h3>
 
 - SW2 will also be a DHCP server for its network. Option 43 will be configured for the 192.168.10.50 IP, so that the AP knows how to connect to the WLC:
@@ -220,7 +224,7 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 <img src="https://i.imgur.com/9mfRuRU.png"/>
 
 </p>
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 <p><h3>11. Confirm that the LWAP has formed a connection with the WLC back at the 192.168.10.0 /24 network and is broadcasting SSIDs</h3>
 
 - Configure port fa0/2 as an access port for VLAN 40. With everything configured for the 172.20.40.0 network, the AP should now form a CAPWAP connection back to the WLC, and should be broadcasting the Corporate and Guest SSIDs:
