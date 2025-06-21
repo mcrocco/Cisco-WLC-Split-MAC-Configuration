@@ -76,15 +76,15 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 - SW1 will be performing all of the routing in this network, as well as act as a DHCP server for each VLAN. In this topology, there will be 3 VLANs: Management (10), Corporate (20), & Guest (30). Lets start by configuring the VLANs on SW1:
 
 <img src="https://i.imgur.com/QnkXe93.png"/> 
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 - We also want to configure an SVI for each VLAN so that the switch can perform inter-vlan routing. We will configure a .1 IP for each SVI, since it will be the gateway for all VLANs:
 
 <img src="https://i.imgur.com/BMDRzyw.png"/> 
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 - Even with the configuration of SVIs, this switch is still only operating in Layer 2. We need to enter the command “ip routing” to enable Layer 3 capabilities:
 
 <img src="https://i.imgur.com/mauO233.png"/> 
-
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
 - Next, we will configure the SW1 to be a DHCP server for each VLAN. We will configure the DHCP server to share information on the default gateway (the SVI of the VLAN), as well as option 43. Option 43 isn’t necessary for the LWAPs connected to this same switch, but it necessary for other APs in different networks to be able to know the IP of the WLC to connect to:
 
 <img src="https://i.imgur.com/d5telcI.png"/> 
