@@ -49,3 +49,28 @@ The purpose is to demonstrate how to deploy wireless networks by configuring a W
 - The default IP for the WLC is 192.168.1.1 /28. We will change the configuration on the PC to have an IP of 192.168.1.2 /28 so that we are on the same subnet as the WLC:
 
 <img src="https://i.imgur.com/DoTdAH3.png"/> 
+
+- Then, ping 192.168.1.1 to confirm that each device can reach each other:
+
+<img src="https://i.imgur.com/zyvFVfc.png"/> 
+
+- Head to the web browser and type in the IP address 192.168.1.1. After a little bit, the welcome page for the WLC GUI will appear:
+
+<img src="https://i.imgur.com/8ckjpEH.png"/> 
+
+-  We will configure the initial admin account with a username of “admin” and password of “Cisco123”.
+-  The GUI will then ask for a new System Name, management IP address, default gateway, and management VLAN ID. We will use 192.168.10.50 /24 for the management IP of the WLC controller, and map it to VLAN 10, the management VLAN. The System name will be WLC1, with a default gateway of 192.168.10.1, which will be the SVI IP of SW1 once we configure it:
+
+<img src="https://i.imgur.com/Tsbgu1J.png"/> 
+
+- The WLC will then ask us to configure at least one wireless network. We will configure the Corporate network, with WPA2 PSK as the security method, with a passphrase of Cisco123:
+
+<img src="https://i.imgur.com/Jq5hSfC.png"/> 
+
+-  Note that it will be mapped to the management VLAN at the current configuration. We will edit this later to map it to our Corporate VLAN 20. 
+- After this, select "Next" then "Apply", in which the WLC will reboot with its newly configured settings
+</p>
+
+<p><h3>2. Configure multilayer switch SW1 (VLANs, ip routing, DHCP, etc)</h3>
+
+
